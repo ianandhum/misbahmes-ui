@@ -1,0 +1,151 @@
+/*
+    Viewer class  styles
+*/
+
+.v_viewer{
+    background: #eeeeee;
+}
+.h_white{
+    background:#384259;
+    color:rgb(255, 255, 255);
+    
+}
+.h_white .navbar .item{
+    color:#ffffff;
+}
+.h_white.scrolling .navbar .item{
+    color:#292929;
+}
+.v_header{
+    min-height:240px;
+    background-color:#263238;
+    color:rgb(231, 231, 231);
+    margin:0 0 0;
+}
+
+.v_header h1{
+    font-family: "IBM Plex Sans Condensed",sans-serif;
+    font-size:3.5em;
+    font-weight: bold;
+    text-transform: lowercase;
+    padding:50px 10px 0px ;
+    
+}
+.v_header .posted{
+    padding:5px 10px;
+}
+.dl_btn{
+    padding:80px 50px;
+}
+.pdf_cont_box{
+    width:80%;
+    margin:50px 10% ;
+    float: right;
+    border-radius: 0px;
+    background:#fff;
+    padding:0px;
+    z-index: 3;
+    height:auto;
+    position: relative;
+}
+.pdf_cont{
+    width:100%;
+}
+.pdf-nav{
+    height:80px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px rgba(92, 92, 92, 0.116);
+    border-bottom:1px solid rgb(233, 233, 233);
+    z-index: 4;
+    padding: 0px;
+    overflow: hidden;
+    
+
+}
+.pdf-nav .cont{
+    width: 100%;
+    margin:0;
+}
+.nav_btn{
+    height:100%;
+    line-height: 80px;
+    background-color:transparent;
+    font-family: 'Saira Extra Condensed',sans-serif;
+    text-transform: uppercase;
+    color:rgb(44, 44, 44);
+    padding:0px 5px;
+    text-align: center;
+    font-size: 21px;
+    cursor: pointer;
+    width:100%;
+}
+.nav_btn:hover{
+    background: #6effdb;
+}
+.nav_btn.prev{
+    float: left;
+}
+.nav_btn.next{
+    float: right;
+}
+
+.pdf-nav .cont .center_box{
+    text-align:center;
+    color:#000;
+    font-family: 'Saira Extra Condensed',sans-serif;
+    font-size:18px;
+    line-height: 80px;
+}
+.cont .center_box .page_input{
+    height:30px;
+    margin:20px 10px;
+    width:40px;
+    text-align: center;
+}
+.cont_page_pdf{
+    min-height:auto;
+    width:100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    clear: none;
+
+}
+
+
+.fill_box{
+    width:100%;
+    color:rgb(48, 48, 48);
+    font-size:40px;
+    text-align:center;
+    padding-top:100px;
+}
+
+@media only screen and (max-width:800px){
+    .pdf_cont_box{
+        width:100%;
+        margin:50px 0;
+    }
+    .v_header{
+        min-height: 200px;
+        text-align: center;
+    }
+    .v_header h1{
+        font-size: 3em;
+        padding:0px;
+    }
+    .nav_btn{
+
+    font-size: 14px;
+    }
+    .fill_box{
+        font-size: 25px;
+    }
+    .dl_btn{
+        padding:20px;
+        width:60%;
+        display: block;
+        margin:0px 20%;
+    }
+    
+}
+
