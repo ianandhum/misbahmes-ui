@@ -17,9 +17,8 @@ class App extends React.Component{
                     <Route path="/:postId/reader" exact component={Viewer} />
                     <Route path="/about"  component={About}/>
                     <Route path="/callforPaper" exact component={CallForPaper}/>
-                    <Route path="/login" exact component={Login}/>
+                    <Route path="/admin/login" exact component={Login}/>
                     <Route path="*" component={NotFound}/>
-                    
                 </Switch>
             </BrowserRouter>
         );
