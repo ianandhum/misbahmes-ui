@@ -21,7 +21,7 @@ class App extends React.Component{
                     <Route path="*" component={NotFound}/>
                 </Switch>
             </BrowserRouter>
-        );
+        )
    }     
 }
 ReactDOM.render(<App/>,document.getElementById('root'));
