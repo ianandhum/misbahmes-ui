@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter , Route  , Switch} from 'react-router-dom';
 import './index.css';
-import Home from  './Home';
-import Viewer from "./Viewer";
-import About from "./About"
-import CallForPaper from "./CallForPaper"
-import Login from "./Login"
-import NotFound from "./NotFound"
+import Home from  './components/Home';
+import Viewer from "./components/Viewer";
+import About from "./components/About"
+import CallForPaper from "./components/CallForPaper"
+import Login from "./components/Login"
+import NotFound from "./components/NotFound"
+
 class App extends React.Component{
    render(){
        return(
