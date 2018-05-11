@@ -19,7 +19,6 @@ class App extends React.Component{
                     <Route path="/callforPaper" exact component={CallForPaper}/>
                     <Route path="/login" exact component={Login}/>
                     <Route path="*" component={NotFound}/>
-                    
                 </Switch>
             </BrowserRouter>
         );
