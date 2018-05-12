@@ -87,7 +87,7 @@ class About extends Component{
                         mail:"dreabdulrazac@gmail.com"
                     },
                     {
-                        image:"Dr_Babu_joseph.png",
+                        image:"Dr_Babu_joseph.jpg",
                         name:"Dr. Babu Joseph",
                         pos:"Associate Professor, Dept. of Hindi, K.E. College, Mannanam"
                         ,ph:9447868474,
