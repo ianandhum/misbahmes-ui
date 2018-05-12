@@ -40,11 +40,12 @@
     font-size: 1.4em;
     font-weight: bold;
 }
-.cont_box ol li{
+.cont_box ol li,.cont_box span{
     padding:10px;
     font-family: "Lato",sans-serif;
     font-size: 1.2em;
 }
+
 .call-for-paper > .main_box{
     background:transparent;
     min-height: 100px;
@@ -53,7 +54,7 @@
     margin:10px 10%;
     color:rgb(49, 49, 49);
 }
-.main_box .head{
+.main_box .head,.cont_box .head{
     font-size:2em;
     font-family:"IBM Plex Sans Condensed",sans-serif;
     

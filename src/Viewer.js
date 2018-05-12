@@ -6,6 +6,7 @@ import {Document ,Page} from 'react-pdf/dist/entry.webpack';
 import $ from 'jquery'
 import './viewer.css'
 import LoadError from "./LoadError"
+import Header from './Header';
 
 let ContainerFluid=(props)=>(
   <div className="container-fluid" style={{margin:0,padding:0}}>{props.children}</div>
@@ -23,6 +24,8 @@ class HeadBox extends Component{
         this.state={
             status:false
         }
+        this.contentShouldDisplay=true
+        
     }
     
     onJsonResult(result){
@@ -67,7 +70,7 @@ class HeadBox extends Component{
     content.pdfURL="https://api.misbahmes.com/v1/download/"+this.props.id+".pdf"
     return(
       <Row style={{margin:0}}>
-      
+        <Header />
         <Col xs={12} md={12} className={"v_header "+this.props.className} key={this.state.post_id}>
             {
               this.state.status &&([
@@ -87,7 +90,8 @@ class HeadBox extends Component{
               </Col>,
               <Col xs={12} md={3} key="col_btn" className="dl_btn">
                 <a href={content.pdfURL} className="launch-btn" style={{width:"80%"}}>DOWNLOAD AS PDF</a>
-              </Col>])
+              </Col> 
+            ])
             }
         </Col>
         
@@ -167,7 +171,7 @@ class DocViewer extends React.Component{
 
     }
     return([
-            <AutoAffix  key="pdf_affix" offsetTop={240}>
+            <AutoAffix  key="pdf_affix" offsetTop={340}>
                 <Col xs={12} md={12} className="pdf-nav">
                   <div className="cont">
                      <Col xs={3} md={2} style={{margin:0,padding:0}}>

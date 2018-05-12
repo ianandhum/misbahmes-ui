@@ -85,7 +85,7 @@ a.brand_link:hover{
     color:#333;
 }
 .navbar > .item:hover{
-    border:1px solid #fff;
+    border-bottom:1px solid #fff;
     color:#fff;
 }
 .col-left{

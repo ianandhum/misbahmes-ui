@@ -21,7 +21,10 @@
     background-color:#263238;
     color:rgb(231, 231, 231);
     margin:0 0 0;
+    padding: 0px;
+    padding-top:40px;
 }
+
 
 .v_header h1{
     font-family: "IBM Plex Sans Condensed",sans-serif;
@@ -33,6 +36,7 @@
 }
 .v_header .posted{
     padding:5px 10px;
+    font-family: "IBM Plex Sans Condensed",sans-serif;
 }
 .dl_btn{
     padding:80px 50px;
