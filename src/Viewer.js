@@ -24,7 +24,7 @@ class HeadBox extends Component{
         this.state={
             status:false
         }
-        this.contentShouldDisplay=true
+        this.contentShouldDisplay=false
         
     }
     
@@ -70,7 +70,7 @@ class HeadBox extends Component{
     content.pdfURL="https://api.misbahmes.com/v1/download/"+this.props.id+".pdf"
     return(
       <Row style={{margin:0}}>
-        <Header />
+        <Header className="light" />
         <Col xs={12} md={12} className={"v_header "+this.props.className} key={this.state.post_id}>
             {
               this.state.status &&([

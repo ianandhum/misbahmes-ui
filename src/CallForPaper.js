@@ -21,7 +21,7 @@ class CallForPaper extends React.Component{
                 </Col>
                 <Col xs={12} md={12} className="cont_box" style={{marginTop:"30px"}}>
                     <h3 className="head">Ethical Policy</h3>
-                    <span>
+                    <span className="cont">
                         We publish only genuine and unpublished research papers of multi-
                         disciplinary variance viz., Arts, Science, Humanities and Engineering which can
                         enhance and enrich the diverse fields of the Indian research scenario. The

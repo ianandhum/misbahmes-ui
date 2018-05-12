@@ -40,7 +40,7 @@
     font-size: 1.4em;
     font-weight: bold;
 }
-.cont_box ol li,.cont_box span{
+.cont_box ol li,.cont_box .cont{
     padding:10px;
     font-family: "Lato",sans-serif;
     font-size: 1.2em;
