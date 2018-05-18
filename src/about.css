@@ -73,7 +73,7 @@
     margin-top:50px;
 }
 .person_box{
-    min-height: 300px;
+    min-height: 250px;
     margin:50px 0px;
     padding:10px 50px;
     cursor: pointer;
@@ -86,7 +86,7 @@
 
 }
 .person_box_main{
-    min-height: 300px;
+    min-height: 250px;
     margin:50px 0px;
     background:transparent;
     cursor: pointer;
@@ -138,7 +138,7 @@
 }
 .person_box .pos,.person_box_main .pos{
     margin-top:5px;
-    height: 40px;
+    height: 25px;
     font-size:15px;
     font-family: "Lato",sans-serif;
     text-align: center;
