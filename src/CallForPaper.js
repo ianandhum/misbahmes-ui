@@ -55,7 +55,7 @@ class CallForPaper extends React.Component{
                     </ol>
                 </Col>
                 <Col xs={12} md={12} className="cont_box" >
-                    <p>The soft copy shall be sent to the following e-mail id of the Research Forum<br/> <a  className="mail_to" href="mailto:misbahmes@gmail.com">misbahmes@gmail.com</a></p>
+                    <p>The soft copy shall be sent to the following e-mail id of the Research Committee<br/> <a  className="mail_to" href="mailto:misbahmes@gmail.com">misbahmes@gmail.com</a></p>
                 </Col>
                 <Col xs={12} md={12} className="main_box">
                     <h3 className="head">Subscription</h3>
@@ -69,7 +69,7 @@ class CallForPaper extends React.Component{
                             <li>Payment shall be credited to the Joint Account of the Principal & Coordinator, Research Committee, MES College Nedumkandam in the Union Bank of India, Nedumkandam branch.</li>
                             <li><b>A/C No.455102010025494</b></li>
                             <li><b>IFSC Code UBIN0545511</b></li>
-                            <li>The Journal will be posted to the address concerned</li>
+                            <li>The Hard copy of the  Journal will be posted to the address concerned</li>
                         </ul> 
                     </Col>
                     <Col xs={12} md={4}>

@@ -73,7 +73,7 @@
     margin-top:50px;
 }
 .person_box{
-    min-height: 250px;
+    min-height: 300px;
     margin:50px 0px;
     padding:10px 50px;
     cursor: pointer;
@@ -86,7 +86,7 @@
 
 }
 .person_box_main{
-    min-height: 250px;
+    min-height: 300px;
     margin:50px 0px;
     background:transparent;
     cursor: pointer;
@@ -138,10 +138,33 @@
 }
 .person_box .pos,.person_box_main .pos{
     margin-top:5px;
+    height: 40px;
     font-size:15px;
     font-family: "Lato",sans-serif;
     text-align: center;
 }
+
+.person_box .moreLink,.person_box_main .moreLink{
+    width: 150px;
+    margin: 30px auto;
+
+}
+
+.person_box .moreLink div,.person_box_main .moreLink div{
+    width: 100%;
+
+    color: #fff;
+    background-color: #009688;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 300ms linear 0s;
+}
+.person_box .moreLink div:hover ,.person_box_main .moreLink div:hover{
+
+    background-color: #005296;
+  
+}
+
 
 .modal_box{
     position: fixed;
