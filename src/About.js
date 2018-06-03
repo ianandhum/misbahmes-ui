@@ -250,7 +250,7 @@ let Person=function(props){
                    <div className="image" {...img}></div>
                    <div className="name">{props.name}</div>
                    <div className="pos">{props.pos}</div>
-                   <div className="moreLink"><div>More</div></div>
+                   <div className="moreLink"></div>
                    
             </Col>
 

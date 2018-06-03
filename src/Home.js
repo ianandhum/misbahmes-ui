@@ -296,7 +296,7 @@ let PersonMain=function(props){
                    <div className="head name">{props.head}</div>
                    <div className="name">{props.name}</div>
                    <div className="pos">{props.pos}</div>
-                   <div className="moreLink"><div>More</div></div>
+                   <div className="moreLink"></div>
             </Col>
 
         </React.Fragment>

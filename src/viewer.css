@@ -131,6 +131,7 @@
     }
     .v_header{
         min-height: 200px;
+        padding-top:100px;
         text-align: center;
     }
     .v_header h1{
@@ -146,9 +147,9 @@
     }
     .dl_btn{
         padding:20px;
-        width:60%;
+        width:80%;
         display: block;
-        margin:0px 20%;
+        margin:0px 10%;
     }
     
 }

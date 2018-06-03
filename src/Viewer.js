@@ -146,7 +146,7 @@ class DocViewer extends React.Component{
     var prevState=this.state
     if(this.state.pageNumber>1){
       --prevState.pageNumber;
-      $(window).scrollTop($('.v_header').height()+1)
+      $(window).scrollTop($('.v_header').height()+80)
       this.setState(prevState)
     } 
   }
@@ -154,7 +154,7 @@ class DocViewer extends React.Component{
     var prevState=this.state
     if(this.state.pageNumber<this.state.totalPages){
       ++prevState.pageNumber;
-      $(window).scrollTop($('.v_header').height()+1)
+      $(window).scrollTop($('.v_header').height()+80)
       this.setState(prevState)
     }
   }
@@ -170,8 +170,18 @@ class DocViewer extends React.Component{
       loaded:this.state.loaded
 
     }
+    let AffixProps={
+     
+    }
+    if($(window).width()<800){
+      AffixProps.OffsetBottom=340
+    }
+    else{
+      AffixProps.OffsetTop=340
+    }
+    
     return([
-            <AutoAffix  key="pdf_affix" offsetTop={340}>
+            <AutoAffix  key="pdf_affix" {...AffixProps}>
                 <Col xs={12} md={12} className="pdf-nav">
                   <div className="cont">
                      <Col xs={3} md={2} style={{margin:0,padding:0}}>
