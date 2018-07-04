@@ -96,7 +96,7 @@ class About extends Component{
                     {
                         image:"Dr_Sabu_MK.jpg",
                         name:"Dr. Sabu M.K.",
-                        pos:"Associate Professor, Department of Computer Applications, Cochin University of Science And Technology, Kochi"
+                        pos:"Associate Professor, Department of Computer Applications, CUSAT, Kochi"
                         ,ph:9446128197,
                         mail:"sabumk@cusat.ac.in"
                     },
@@ -110,7 +110,7 @@ class About extends Component{
                     {
                         image:"Dr_Nagendra_Shreeniwas.jpg",
                         name:"Dr. Nagendra Sreenivas",
-                        pos:"Assistant Professor, Department of Russian and Comparative Literature, Jawaharlal Nehru University, New Delhi"
+                        pos:"Assistant Professor, Department of Russian and Comparative Literature,JNU, New Delhi"
                         ,ph:9495704516,
                         mail:"nshreenivas@gmail.com"
                     }
