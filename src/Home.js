@@ -95,7 +95,7 @@ class ContentHead extends Component{
         )
     }
 }
-class TimeLinePost extends Component{
+class TimeLinePostTile extends Component{
     host="https://api.misbahmes.com/v1"
     url= "/posts/all";
     thumb="/thumb/"
@@ -119,42 +119,37 @@ class TimeLinePost extends Component{
             return(
                 <Col xs={12} md={6} className="cont_box" key="cont-box_2_2">
                             <div className="head">
-                                Sorry , We're Having trouble getting data
+                                Sorry , We're Having trouble displaying data
                             </div>
                 </Col>
             )
         }
         return(
-            [
-                    <Col xs={12} md={6} className="img_box_2" key="img-box_2_2">
-                            <div className="img" style={{backgroundImage:this.getThumb()}}>
-                            </div>
-                            
-                           
-                        </Col>,
-                        
-                        <Col xs={12} md={6} className="cont_box" key="cont-box_2_2">
+            <Col className="pst_item" xs={12} md={4} key={this.props.i+"_post_item"}>
+                   
+                    <div  className="cont_box" key="cont-box_2_2">
                             <div className="head">
                                 {this.props.post.post_head +" "+ this.props.post.post_year}
                             </div>
                             <div className="posted">
-                                Uploaded on <Label bsSize="medium" bsStyle='default'>{this.getDate()}</Label>
+                                Uploaded on <Label bsSize="medium" bsStyle='info' style={{padding:"8px 5px"}}>{this.getDate()}</Label>
                             </div>
                             <div className="cont">
-                                {this.props.post.post_desc.substring(0,300)}...
+                                {this.props.post.post_desc.substring(0,150)}...
                             </div>
                             <Col xs={12} md={12}>
                                     
-                                        <a href={this.props.post.post_id+"/reader"} className="launch-btn dark" style={{float:"left"}}>READ NOW</a>
+                                        <a href={this.props.post.post_id+"/reader"} className="launch-btn blue" style={{float:"left"}}>READ NOW</a>
                                     
                                 
                                 
                             </Col>
-                    </Col>
-            ]
+                    </div>
+            </Col>
         )
     }
 }
+
 class Posts extends Component{
     host="https://api.misbahmes.com/v1"
     url= "/posts/all";
@@ -167,7 +162,7 @@ class Posts extends Component{
         )
         this.state={
             status:false,
-            active_index:-1
+            showAll:false
         }
     }
     
@@ -196,19 +191,17 @@ class Posts extends Component{
         this.setState({
             status:true,
             post : json.data,
-            active_index:0
+            showAll:false
         })
 
 
 
     }
-    
-    handleTimelineItemSelect(id){
-        if(id>=0){
-            var prevState=this.state
-            prevState.active_index=id
+  
+    toggleShowAll(){
+            var prevState=this.state;
+            prevState.showAll=!this.state.showAll;
             this.setState(prevState);
-        }
     }
     
     render(){
@@ -223,41 +216,60 @@ class Posts extends Component{
                 }
             }
         }
-        const options = {
-            items: 1,
-            infinite:true,
-            nav: false,
-            rewind: true,
-            autoplay: true,
-            autoplayTimeout:10000
-
-        };
-         
+        const   transOpts={
+            transitionEnterTimeout:500,
+            transitionLeaveTimeout:300
+        }
         return (
 
             (this.state.status)?
-            <OwlCarousel ref="posts" options={options}>
+            <div className="post-block">
                     
                         
                         {
                                 
-                                (this.state.post.map((postItem,i)=>  
-                                    <Row className="post_item" key={i+"_post_item"}>
-                                        <TimeLinePost post={postItem}/>
-                                    </Row>
+                                (this.state.post.slice(1,4).map((postItem,i)=>  
+                                    
+                                        <TimeLinePostTile post={postItem} key={i+"_postItem"} i={i}/>
+                                    
                                 )
                                 )
                                 
+                                
                             
                         }  
+                        {
+                            (this.state.post.length>4) &&
+                            
+                                <button  className={(this.state.showAll)?"btn btn-more active":"btn btn-more"} onClick={this.toggleShowAll.bind(this)}>
+                                       {
+                                           (this.state.showAll)?
+                                                "hide":
+                                                "show all"
+                                        }
+                                </button>
+                            
+                        }
+                        <CSSTransitionGroup 
+                                        transitionName="example"
+                                        {...transOpts}>
+                        {
+                            this.state.showAll&&(this.state.post.slice(4,1000).map((postItem,i)=>  
+                                    
+                            
+                                <TimeLinePostTile post={postItem} key={i+"_key"} i={i}/>
+                        
+                            )
+                            )
+                        }
+                        </CSSTransitionGroup>
                     
-            </OwlCarousel>  
+            </div>  
             :
             null 
         )
     }
-}
-//includes 
+}//includes 
 class Footer extends    Component{
     loadLogin(){
         window.location.replace("/login")
