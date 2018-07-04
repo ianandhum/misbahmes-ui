@@ -203,7 +203,6 @@ a.brand_link:hover{
     display: block;
     margin:7% auto 0;
     min-width:150px;
-    width:auto;
     border:2px solid #fff;
     padding:8px 10px;
     border-radius: 40px;
@@ -230,6 +229,18 @@ a.launch-btn{
     color:rgb(255, 255, 255);
     background:#000000;
     border-color:#000000;
+}
+.launch-btn.blue{
+    color:#fff;
+    border:0px;
+    display: block;
+    margin: 20px 25%;
+    padding:12px 0px;
+    background-color: #0039a2;
+    
+}
+.launch-btn.blue:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.288)
 }
 
 
