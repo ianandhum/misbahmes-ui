@@ -266,7 +266,7 @@ a.launch-btn{
 
 }
 .cont-features{
-    padding:30px;
+    padding:60px 30px;
     min-height: 300px;
 }
 .cont-features .c_box{
@@ -320,7 +320,7 @@ a.launch-btn{
     min-height: 500px;
     width:100%;
     
-
+    padding: 30px 0px;
     background-color:rgb(255, 255, 255);
     font-weight: bold;
     overflow: hidden;

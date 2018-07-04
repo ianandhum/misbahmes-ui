@@ -458,11 +458,11 @@ class Home extends Component{
                                <EditorBox />
                             </Row>
                         
-                            <div className="trap-top trap-left"></div>
+                            <div className="trap-top trap-left hidden"></div>
                             <Row className="cont-journal" style={{margin:"0px"}}>
                                  <Posts  onLoadError={this.statChanged.bind(this)}/>
                             </Row>
-                            <div className="trap-bottom trap-right" style={{backgroundColor:"#263238"}}></div>
+                            <div className="trap-bottom trap-right hidden" style={{backgroundColor:"#263238"}}></div>
                             <Row className="cont-foot" style={{margin:"0px"}}>
                                 <Footer/>
                                 <Col xs={12} md={12} className="foot_crumb" key="foot_crumb">

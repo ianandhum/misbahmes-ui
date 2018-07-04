@@ -267,7 +267,7 @@
     height: 100%;
     width:100%;
     z-index: 10;
-    background-color: rgba(0, 13, 27, 0.589)
+    background-image:  linear-gradient(180deg,#333333cf 0,#333333cf 50%,#000000b6 50%,#000000b4 100%);
 }
 
 @media only screen and (max-width:800px){
