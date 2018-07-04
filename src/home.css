@@ -326,11 +326,32 @@ a.launch-btn{
     overflow: hidden;
 
 }
+
+.post-block .btn-more{
+    display: block;
+    margin:10px auto 30px;
+    min-width: 150px;
+    padding: 10px;
+    font-family: 'Cabin',sans-serif;
+    font-size: 1.2em;
+    background:rgb(51, 139, 255);
+    border-radius: 30px;
+    border:0px;
+    text-transform: capitalize;
+    color:rgb(255, 255, 255);
+}
+.btn-more.active{
+
+    background:rgb(81, 18, 182);
+    color: rgb(255, 255, 255);
+}
 .trap-bottom{
     border-bottom: 50px solid transparent;
+    display: none;
 }
 .trap-top{
     border-top: 50px solid transparent; 
+    display: none;
 }
 .trap-right{
     border-right:1366px solid rgb(255, 255, 255);
@@ -448,32 +469,65 @@ a.launch-btn{
 
 
 }
-.post_item  .cont_box{
+.post_item  .cont_box,.pst_item  .cont_box{
     height:100%;
-    
+    padding: 30px;
 }
-.post_item  .cont_box .head{
+.post_item  .cont_box .head,.pst_item  .cont_box .head{
     margin-top:10%;
-    font-size:40px;
-    color:rgb(0, 0, 0);
+    font-size:2em;
     font-family: "IBM Plex Sans Condensed",sans-serif;
     font-weight: bold;
 }
-.post_item  .cont_box .posted{
+.post_item  .cont_box .posted,.pst_item  .cont_box .posted{
     font-size:17px;
     font-family: "Lato",sans-serif;
     font-weight: lighter;
-    color:#333;
 }
-.post_item  .cont_box .cont{
+.post_item  .cont_box .cont,.pst_item  .cont_box .cont{
     font-size:17px;
     font-family: "Lato",sans-serif;
     font-weight: lighter;
-    color:rgb(36, 36, 36); 
     padding:30px;
     padding-left:0px;
     text-align: justify;
 }
+.pst_item .img_cont{
+    height:300px;
+    width:100%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: overlay;
+    background-image: linear-gradient(30deg,rgba(255, 255, 255, 0.527) 0%,rgba(0, 0, 0, 0.342) 100%),url('img/thumb.png');
+    
+}
+.pst_item{
+    width: 30%;
+    margin: 0px 1.65%;
+    min-height:400px;
+    padding:0px;
+    overflow: hidden;
+    color:#111;
+    background:#ffffff;
+    box-shadow: 0px 0px 20px rgba(131, 131, 131, 0.178);
+    padding-bottom:50px;
+    transition:all 100ms linear 0s;
+}
+
+.c-journal-head{
+    min-height:100px;
+    padding: 0px 0px 70px;
+    
+}
+.c-journal-head h3{
+    color:#000;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Cabin',sans-serif;
+}
+
+
 .cont-foot{
     min-height:350px;
     background-size: 100%;
