@@ -132,7 +132,7 @@ class TimeLinePostTile extends Component{
                                 {this.props.post.post_head +" "+ this.props.post.post_year}
                             </div>
                             <div className="posted">
-                                Uploaded on <Label bsSize="medium" bsStyle='info' style={{padding:"8px 5px"}}>{this.getDate()}</Label>
+                                Uploaded on <Label bsSize="medium" bsStyle='default' style={{padding:"8px 5px"}}>{this.getDate()}</Label>
                             </div>
                             <div className="cont">
                                 {this.props.post.post_desc.substring(0,150)}...
@@ -244,8 +244,8 @@ class Posts extends Component{
                                 <button  className={(this.state.showAll)?"btn btn-more active":"btn btn-more"} onClick={this.toggleShowAll.bind(this)}>
                                        {
                                            (this.state.showAll)?
-                                                "hide":
-                                                "show all"
+                                                "HIDE":
+                                                "SHOW ALL"
                                         }
                                 </button>
                             
@@ -467,11 +467,17 @@ class Home extends Component{
                             </Row>
 
                             <Row  className="cont-features" style={{margin:0}}>
+                                <Col className="c-journal-head"  xs={12} md={12}>
+                                    <h3 style={{color:"#fff"}}>Editorial Board</h3>
+                                </Col>
                                <EditorBox />
                             </Row>
                         
                             <div className="trap-top trap-left hidden"></div>
                             <Row className="cont-journal" style={{margin:"0px"}}>
+                                <Col className="c-journal-head" xs={12} md={12}>
+                                    <h3>Previous Releases</h3>
+                                </Col>
                                  <Posts  onLoadError={this.statChanged.bind(this)}/>
                             </Row>
                             <div className="trap-bottom trap-right hidden" style={{backgroundColor:"#263238"}}></div>
