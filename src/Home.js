@@ -3,7 +3,6 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import Row from 'react-bootstrap/lib/Row'
 import Col from 'react-bootstrap/lib/Col'
 import Label from 'react-bootstrap/lib/Label'
-import OwlCarousel from 'react-owl-carousel2' 
 import Modal from "react-modal"
 import $ from 'jquery'
 import Header from "./Header"
