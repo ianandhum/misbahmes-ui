@@ -1,6 +1,1 @@
-/build/
-.directory
 build/*
-build/service-worker.js
-build/asset-manifest.json
-build/index.html
