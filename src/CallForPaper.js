@@ -50,7 +50,7 @@ class CallForPaper extends React.Component{
                         <li>Bibliography / Reference must be prepared strictly as per <b>M.L.A style format</b> 8th edition.</li>
                         <li><b>.pdf</b> files are <b>not</b> accepted</li>
                         <li>All the Papers will be blindly reviewed by our team and the accepted papers will be intimated in due course.</li>
-                        <li>The Research Papers in the prescribed format will only be accepted which will be checked against plagiarism using suitable software concerned</li>
+                        <li>The Research Papers in the prescribed format will only be accepted which will be checked against plagiarism using <a href="https://www.urkund.com/" style={{color:"#000",textDecoration:"underline",fontWeight:"bold"}} target="blank">URKUND</a> software .</li>
                         
                     </ol>
                 </Col>

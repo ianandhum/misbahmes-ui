@@ -29,7 +29,7 @@ class About extends Component{
                     {   
                         image:"dr_Lalu_s_kurup.jpg",
                         name:"Dr. Lalu S. Kurup",
-                        pos:" Assistant Professor, Department of Malayalam, N.S.S. College, Nilamel, Thiruvananthapuram"
+                        pos:"Assistant Professor, Department of Malayalam NSS College Cherthala ,Alapuzha"
                         ,ph:9497671721,
                         mail:"lalusmudra@gmail.com"
                     },
@@ -110,7 +110,7 @@ class About extends Component{
                     {
                         image:"Dr_Nagendra_Shreeniwas.jpg",
                         name:"Dr. Nagendra Sreenivas",
-                        pos:"Assistant Professor, Department of Russian and Comparative Literature,JNU, New Delhi"
+                        pos:"Assistant professor ,Centre of Russian Studies(CRS),School of Language , Literature  and Culture  Studies(SLL&CS-1) JNU New Delhi -110067"
                         ,ph:9495704516,
                         mail:"nshreenivas@gmail.com"
                     }

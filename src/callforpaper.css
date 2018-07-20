@@ -11,7 +11,8 @@
     min-height: 250px;
     text-align: center;
     background:#273238;
-    font-family: "IBM Plex Sans Condensed"
+    font-family: "IBM Plex Sans Condensed";
+    margin-bottom: 100px;
 }
 .head_box h1{
     color:#fff;
@@ -22,8 +23,8 @@
 .call-for-paper > .cont_box{
     min-height: 100px;
     height:100%;
-    width:80%;
-    margin:10px 10%;
+    width:90%;
+    margin:20px 5%;
     z-index: 1;
     padding:30px;
     background:#fff;
@@ -50,8 +51,8 @@
     background:transparent;
     min-height: 100px;
     height:100%;
-    width:80%;
-    margin:10px 10%;
+    width:90%;
+    margin:50px 5% 10px;
     color:rgb(49, 49, 49);
 }
 .main_box .head,.cont_box .head{
@@ -132,6 +133,10 @@
     .call-for-paper > .main_box{
         width:90%;
         margin: 5%;
+    }
+    .call-for-paper .head_box{
+        margin-bottom: 50px;
+
     }
     .subscribe {
         border-width: 0px;

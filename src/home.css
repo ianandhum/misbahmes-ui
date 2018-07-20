@@ -332,7 +332,7 @@ a.launch-btn{
     width:100%;
     
     padding: 80px 0px;
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(245, 245, 245);
     font-weight: bold;
     overflow: hidden;
 
@@ -544,6 +544,7 @@ a.launch-btn{
     background-size: 100%;
     background-position: bottom;
     background-color: #263238;
+    padding-top: 20px;
     color:rgb(240, 240, 240);
 }
 
