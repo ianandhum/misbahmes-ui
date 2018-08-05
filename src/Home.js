@@ -70,7 +70,9 @@ class LatestRelease extends Component{
         else{
 
            renderer=(   <Col xs={12} md={8} className="round-box">
-                            <h4 style={{textAlign:"center",paddingTop:'100px'}}>NO DATA</h4>
+                            <h4 style={{textAlign:"center",paddingTop:'100px'}}>
+                                please wait...
+                            </h4>
                         </Col>
                     )
         }
