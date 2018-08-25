@@ -152,12 +152,12 @@
     width: 40px;
     background-size:100%;
     background-position: center center;
-    background-image:url('img/more.png');
+    background-image:url('../img/more.png');
     margin: 20px auto;
     border-radius: 50%;
 }
 .person_box_main .moreLink{
-    background-image: url("img/more-light.png")
+    background-image: url("../img/more-light.png")
 }
 
 
