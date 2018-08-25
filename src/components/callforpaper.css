@@ -1,0 +1,148 @@
+.call-for-paper{
+    height:auto;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    min-height: 100%;
+    background:#f8f8f8;
+}
+.call-for-paper > .head_box{
+    min-height: 250px;
+    text-align: center;
+    background:#273238;
+    font-family: "IBM Plex Sans Condensed";
+    margin-bottom: 100px;
+}
+.head_box h1{
+    color:#fff;
+    margin-top:150px;
+    padding:30px 0;
+    font-size:3em;
+}
+.call-for-paper > .cont_box{
+    min-height: 100px;
+    height:100%;
+    width:90%;
+    margin:20px 5%;
+    z-index: 1;
+    padding:30px;
+    background:#fff;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.123)
+}
+.cont_box p{
+    padding:30px;
+    font-family: "IBM Plex Sans Condensed",sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+.cont_box p .mail_to{
+    color:#40ceac;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.cont_box ol li,.cont_box .cont{
+    padding:10px;
+    font-family: "Lato",sans-serif;
+    font-size: 1.2em;
+}
+
+.call-for-paper > .main_box{
+    background:transparent;
+    min-height: 100px;
+    height:100%;
+    width:90%;
+    margin:50px 5% 10px;
+    color:rgb(49, 49, 49);
+}
+.main_box .head,.cont_box .head{
+    font-size:2em;
+    font-family:"IBM Plex Sans Condensed",sans-serif;
+    
+}
+.main_box p{
+    font-family: "Lato",sans-serif;
+    font-size:1.2em;
+    margin:10px 0;
+}
+
+ 
+  .price_box{
+     min-height: 100px;
+     height:100px;
+     margin:10px 0;
+ }
+
+
+ .price_box .price{
+     font-size:2.5em;
+     font-family: "Lato",sans-serif;
+     color:rgb(245, 246, 247);
+     text-align: left;
+     padding-left:50px;
+     font-weight: bold;
+ }
+ .price_box .duration{
+     text-align: left;
+     color:rgb(61, 61, 61);
+     padding-left:50px;
+     line-height: 60px;
+     font-family: "IBM Plex Sans Condensed",sans-serif;
+     font-size: 1.3em;
+ }
+ .subscribe{
+     padding:0px !important;
+     border-left:3px solid #40ceac;
+ }
+ .subscribe div.col-md-4{
+     height:300px;
+     padding:20px 0px;
+     background:#40ceac;
+ }
+ .subscribe .first {
+    padding:20px;
+ }
+ .subscribe .first ul{
+     list-style: none;
+   
+ }
+ .subscribe .first ul li{
+    margin-left:0;
+    padding-left:0;
+    padding:10px;
+    font-family: "Lato",sans-serif;
+    font-size: 1.3em;
+ }
+.foot_crumb.page_callfor{
+    box-shadow: none;
+    background:rgba(255,255,255,0.2);
+    width:80%;
+    margin:20px 10%;
+}
+@media only screen and (max-width:800px){
+    .call-for-paper > .cont_box{
+        width:98%;
+        margin:1%;
+    }
+    .cont_box p{
+        padding: 10px;
+    }
+    .cont_box p .mail_to{
+        font-size: 1.1em;
+    }
+    .call-for-paper > .main_box{
+        width:90%;
+        margin: 5%;
+    }
+    .call-for-paper .head_box{
+        margin-bottom: 50px;
+
+    }
+    .subscribe {
+        border-width: 0px;
+    }
+    .foot_crumb.page_callfor{
+        width:100%;
+        margin:0;
+    }
+}

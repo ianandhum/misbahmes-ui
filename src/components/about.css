@@ -1,0 +1,324 @@
+
+.main-head.dark{
+    height:80px;
+    min-height:80px;
+    background:transparent;
+}
+.main-head.dark .brand,.main-head.dark .item{
+    color:#000;
+}
+.main-head.scrolling.dark{
+    background:#fff;
+    color: #333;
+    border-bottom:1px solid #e6e6e6;
+}
+.main-head.scrolling.dark .brand{
+    color:#333;
+}
+
+.heading.head_abt{
+    padding-top:100px;
+    text-align: center;
+    font-size:35px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color:#333;
+    text-shadow: 2px 2px 0px #ddd;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+.head_cont{
+    padding-top:100px;
+    background-color:#6ef1c6;
+    
+
+}
+.about_container{
+    width:"100%";
+    overflow:"hidden";
+    position:"absolute";
+    color:rgb(0, 0, 0);
+}
+.about-head{
+    min-height:300px;
+    height: auto;
+    padding: 50px 0;
+    color:rgb(255, 255, 255);
+    background-color: #273238;
+}
+.about-head .head_text{
+    margin-top:150px;
+    font-size:3em;
+    text-shadow: 3px 3px 0px rgb(3, 3, 3);
+    font-family: "IBM Plex Sans Condensed",sans-serif;
+    text-transform: uppercase;
+
+}
+.about-head .head_desc{
+    font-size:1.4em;
+    font-family: "IBM Plex Sans Condensed",sans-serif;
+    text-align: center;
+}
+.col_main{
+    margin:0px;
+    padding:0px;
+}
+.col_main.ab{
+    background-color:#f7f9fa;
+}
+.col_main.eb{
+   background-color:rgb(240, 247, 248);
+
+}
+.credit_box{
+    height:auto;
+    width:100%;
+    margin-top:50px;
+}
+.person_box{
+    min-height: 250px;
+    margin:50px 0px;
+    padding:10px 50px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+
+}
+.person_box:hover,.person_box_main:hover{
+    
+    transform: scale(1.1)
+
+}
+.person_box_main{
+    min-height: 250px;
+    margin:50px 0px;
+    background:transparent;
+    cursor: pointer;
+    transition: transform 300ms cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+
+}
+.person_box:last-of-type{
+    margin:50px 33.333%;
+}
+.person_box .image,.person_box_main .image,.modal_box .image{
+    background-image: url("img/person.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
+    
+    margin:auto;
+    background-color:#eee;
+    height:120px;
+    width: 120px;
+    border-radius: 50%;
+    
+
+}
+
+
+
+.person_box_main .image{
+    background-color: #fcfcfc;
+    height:150px;
+    width: 150px;
+    background-position-y: top;
+    background-size: 100%;
+    border:2px solid #fff;
+}
+.person_box .name,.person_box_main .name{
+    font-size:21px;
+    font-family: "Lato",sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top:10px;
+}
+.person_box_main .name{
+    font-size:16px;
+}
+.person_box_main .head{
+    font-size: 24px;
+    font-family:"IBM Plex Sans Condensed",sans-serif;
+}
+.person_box .pos,.person_box_main .pos{
+    margin-top:5px;
+    height: 40px;
+    font-size:15px;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+}
+
+
+.person_box .moreLink,.person_box_main .moreLink{
+    height: 40px;
+    width: 40px;
+    background-size:100%;
+    background-position: center center;
+    background-image:url('img/more.png');
+    margin: 20px auto;
+    border-radius: 50%;
+}
+.person_box_main .moreLink{
+    background-image: url("img/more-light.png")
+}
+
+
+.person_box_main .moreLink div{
+    width: 100%;
+    color: #fff;
+    background-color: transparent;
+    border:1px solid #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 300ms linear 0s;
+}
+.person_box_main .moreLink:hover{
+
+    background-color: #005296;
+    border-color: #fff;
+    color: #fff;
+}
+.person_box .moreLink:hover {
+    background-color: #a2d5ff;
+}
+
+
+.modal_box{
+    position: fixed;
+    height:60%;
+    width:60%;
+    left:20%;
+    top:20%;
+    background-color: rgb(255, 255, 255);
+    color: #222222 ;
+    z-index: 50;
+    overflow: auto;
+    border-radius: 15px;
+    font-family: "IBM Plex Sans Condensed";
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.497);
+
+}
+.modal_box .close_btn{
+ position: absolute;
+ right:15px;
+ font-size:30px;
+ line-height: 50px;
+ text-align: center;
+ top:15px;
+ z-index: 50;   
+ cursor: pointer;
+ color:rgb(58, 58, 58);   
+ height: 50px;
+ width:50px; 
+ transition: all 200ms ease-in 0s;
+}
+.modal_box .close_btn:hover{
+    border-radius: 50%;
+    background-color:#f44 ;
+    color:rgb(255, 255, 255);
+}
+.modal_box .image{
+    height:100%;
+    border-radius: 0px;
+    width:100%;
+    margin:0px;
+}
+.modal_box .name{
+    font-size: 2em;
+    font-weight: bold;
+
+}
+.modal_box .post{
+    
+    font-size: 1.2em;
+}
+.modal_box .col1, .modal_box .col2{
+    height:100%;
+
+}
+.modal_box .col1{
+    padding:0px;
+}
+.modal_box .col2{
+    background-color:rgb(255, 253, 253);
+    color:#000;
+    padding-top:70px;
+}
+.modal_box .phone{
+    padding-top:20px;
+    padding-left:30px;
+    font-size:1.3em;
+}
+.modal_box .phone a,.modal_box .mail a{
+    font-weight:bold;
+    color:#000;
+}
+.modal_box .mail{
+    padding-left:30px;
+    font-size:1.3em;
+
+}
+.modal_box .big_txt{
+    
+    font-size:1.6em;   
+}
+.modal_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    z-index: 10;
+    background-image:  linear-gradient(-25deg,#111111cf 0,#111111cf 50%,#000000b6 50%,#000000b4 100%);
+}
+
+@media only screen and (max-width:800px){
+    .main-head.dark .brand,.main-head.dark .item{
+        color:rgb(255, 255, 255);
+    }
+    .person_box:last-of-type{
+        min-height: 250px;
+        margin:50px 0px;
+    
+    }
+    .about-head .head_text{
+        font-size: 2.4em;
+        padding:5px;
+    }
+    .about-head .head_desc{
+        font-size: 1.1em;
+        padding:25px;
+    }
+    .modal_box{
+        width:92%;
+        left:4%;
+        top:100px; 
+        min-height: 80%;
+        max-height: 90%;
+    }
+    
+    .modal_box .image{
+        margin:auto;
+        height:350px;
+        background-size: cover;
+
+    }
+    .modal_box .col1,.modal_box .col2{
+        height:auto;
+        padding-top:5px;
+        min-height: 80px;
+        
+    }
+    .modal_box .close_btn{
+        color:#333;
+    }
+    .navbar > .item{
+
+        margin:0px;
+    }
+    .navbar > .item:hover{
+        background:transparent
+    }
+    .heading.head_abt{
+        font-size: 30px;
+    }
+}

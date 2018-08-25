@@ -1,0 +1,76 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow: hidden;
+    width:100%;
+    color:#2e2e2e;
+    font-family: sans-serif;
+}
+html{
+    width: 100%;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+
+}
+#root{
+    width:100%;
+    overflow:hidden;
+}
+a:visited{
+    text-decoration: underline;
+    color:#fff;
+}
+.notice_box{
+
+   
+    background: rgb(255, 123, 71);
+    border-radius: 5px;
+    padding:5px;
+    top:100px;
+    text-align: center;
+}
+.notice_box h2{
+
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    color:#000;
+}
+ .main_box_error{
+    background:transparent;
+    min-height: 100px;
+    height:100%;
+    width:80%;
+    margin:10px 10%;
+    color:rgb(49, 49, 49);
+}
+.main_box_error .head{
+    font-size:2em;
+    font-family:"IBM Plex Sans Condensed",sans-serif;
+    
+}
+.main_box_error p{
+    font-family: "Lato",sans-serif;
+    font-size:1.2em;
+    margin:10px 0;
+}
+
+
+/*
+    body page styles
+*/
+body.home{
+    background:#273238;
+    color:#fff;
+}
+body.login{
+    background:#010522;
+    color:rgb(240, 240, 240);
+}
+
