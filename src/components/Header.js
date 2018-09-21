@@ -1,6 +1,7 @@
 import React ,{Component} from 'react'
 import {findDOMNode} from 'react-dom'
 import $ from 'jquery'
+import Link from 'react-router-dom/Link'
 import Row from 'react-bootstrap/lib/Row'
 import Col from 'react-bootstrap/lib/Col'
 
@@ -66,11 +67,10 @@ class Header extends Component{
     render(){
         let navBar=(
                             <nav className="navbar">
-                                <a href="/" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Home</a>
-                                <a href="/about#advisory_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Advisory board</a>
-                                <a href="/about#editorial_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Editorial board</a>
-                                <a href="/callforPaper" className="item highlight  xs-col-12" onClick={this.linkClick.bind(this)}>Call for papers</a>
-                                
+                                <Link to="/" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Home</Link>
+                                <Link to="/about#advisory_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Advisory board</Link>
+                                <Link to="/about#editorial_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Editorial board</Link>
+                                <Link to="/callforPaper" className="item highlight  xs-col-12" onClick={this.linkClick.bind(this)}>Call for papers</Link>    
                             </nav>
         )
         let equivBtn=(

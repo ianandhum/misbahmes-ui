@@ -10,6 +10,7 @@ import LoadError from "./LoadError"
 import "./home.css"
 import "react-owl-carousel2/lib/styles.css" 
 import "react-owl-carousel2/src/owl.theme.green.css"
+import Link from 'react-router-dom/Link';
 
 class LatestRelease extends Component{
     host="https://api.misbahmes.com/v1"
@@ -62,7 +63,7 @@ class LatestRelease extends Component{
                     <div className="text">
                         <h3>{this.state.post_head.substring(0,20)} {this.state.post_year}</h3>
                         <h5>{this.state.post_desc.substring(0,200)}...</h5>
-                        <a href={"/"+ this.state.post_id +"/reader"} className="launch-btn" style={{width:"200px",display:"block",margin:"auto"}}>READ NOW</a>
+                        <Link to={"/"+ this.state.post_id +"/reader"} className="launch-btn" style={{width:"200px",display:"block",margin:"auto"}}>READ NOW</Link>
                     </div>
             </Col>
             )
@@ -70,7 +71,7 @@ class LatestRelease extends Component{
         else{
 
            renderer=(   <Col xs={12} md={8} className="round-box">
-                            <h4 style={{textAlign:"center",paddingTop:'100px'}}>
+                          <h4 style={{textAlign:"center",paddingTop:'100px'}}>
                                 please wait...
                             </h4>
                         </Col>
