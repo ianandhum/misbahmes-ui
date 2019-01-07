@@ -7,3 +7,5 @@ build/*
 *.log
 *.log
 *.kate-swp
+yarn.lock
+package-lock.json
