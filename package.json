@@ -14,7 +14,7 @@
     "react-owl-carousel2": "^0.3.0",
     "react-pdf": "^3.0.4",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
+    "react-scripts": "2.0.3",
     "react-transition-group": "^1.2.1",
     "uuid": "^3.2.1"
   },
@@ -23,5 +23,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
