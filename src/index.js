@@ -22,7 +22,7 @@ class App extends React.Component{
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/:postId/reader" exact component={Viewer} />
-                    <Route path="/about"  component={About}/>
+                    <Route path="/about/:page"  component={About}/>
                     <Route path="/callforPaper" exact component={CallForPaper}/>
                     <Route path="/admin/login" exact component={Login}/>
                     <Route path="*" component={NotFound}/>

@@ -283,7 +283,6 @@ class Viewer extends Component{
         loadError:!status,
         loading:false
       })
-      console.log("hell")
     }
     render(){
         return(
