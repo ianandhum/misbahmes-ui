@@ -11,6 +11,7 @@ import "./home.css"
 import "react-owl-carousel2/lib/styles.css" 
 import "react-owl-carousel2/src/owl.theme.green.css"
 import Link from 'react-router-dom/Link';
+import {withRouter} from 'react-router-dom'
 
 class LatestRelease extends Component{
     host="https://api.misbahmes.com/v1"
@@ -72,7 +73,7 @@ class LatestRelease extends Component{
 
            renderer=(   <Col xs={12} md={8} className="round-box">
                           <h4 style={{textAlign:"center",paddingTop:'100px'}}>
-                                please wait...
+                                <div className="loader-img"></div>
                             </h4>
                         </Col>
                     )
@@ -141,7 +142,7 @@ class TimeLinePostTile extends Component{
                             </div>
                             <Col xs={12} md={12}>
                                     
-                                        <a href={this.props.post.post_id+"/reader"} className="launch-btn blue" style={{float:"left"}}>READ NOW</a>
+                                        <Link to={this.props.post.post_id+"/reader"} className="launch-btn blue" style={{float:"left"}}>READ NOW</Link>
                                     
                                 
                                 
@@ -242,14 +243,15 @@ class Posts extends Component{
                         }  
                         {
                             (this.state.post.length>4) &&
-                            
-                                <button  className={(this.state.showAll)?"btn btn-more active":"btn btn-more"} onClick={this.toggleShowAll.bind(this)}>
-                                       {
-                                           (this.state.showAll)?
-                                                "HIDE":
-                                                "SHOW ALL"
-                                        }
-                                </button>
+                                <div style={{clear:"both",float:"none",padding:"20px 0"}}>
+                                    <button  className={(this.state.showAll)?"btn btn-more active":"btn btn-more"} onClick={this.toggleShowAll.bind(this)}>
+                                        {
+                                            (this.state.showAll)?
+                                                    "HIDE":
+                                                    "SHOW ALL"
+                                            }
+                                    </button>
+                                </div>
                             
                         }
                         <CSSTransitionGroup 
@@ -268,20 +270,22 @@ class Posts extends Component{
                     
             </div>  
             :
-            null 
+            <div className="col-lg-12">
+                <div className="loader-img"></div>
+            </div>
         )
     }
 }//includes 
-class Footer extends    Component{
+class Footer extends Component{
     loadLogin(){
-        window.location.replace("/login")
+        this.props.history.push("/admin/login")
     }
     render(){
         return([
             <Col xs={12} md={12} className="band" key="band_foot"   id="about"> 
                 
                 <Col xs={12} md={3}>
-                    <div className="img" onDoubleClick={this.loadLogin}></div>
+                    <div className="img" onDoubleClick={this.loadLogin.bind(this)}></div>
                 </Col>
                 <Col xs={12} md={9}>
                     <h2 className="heading">Misbah <small>Niche of Knowledge</small></h2>
@@ -431,12 +435,7 @@ class Home extends Component{
             transitionAppearTimeout:500
         }
         var transAppear=false
-        if($("#preload").css('display')==='none'){
-            transAppear=true
-            
-        }
         $('title').text("Misbah - niche of knowledge")
-        $('body').attr({class:""}).addClass('home')
         return ( 
             
 
@@ -484,7 +483,7 @@ class Home extends Component{
                             </Row>
                             <div className="trap-bottom trap-right hidden" style={{backgroundColor:"#263238"}}></div>
                             <Row className="cont-foot" style={{margin:"0px"}}>
-                                <Footer/>
+                                <Footer history={this.props.history} />
                                 <Col xs={12} md={12} className="foot_crumb" key="foot_crumb">
                         
                                  <div className="txt">Copyright  <b> &copy; 2018 MES College Nedumkandam, Chembalam PO Idukki , kerala, PIN:685553</b>
@@ -510,4 +509,4 @@ class Home extends Component{
     }
 }
 export {Footer};
-export default Home;
+export default withRouter(Home);

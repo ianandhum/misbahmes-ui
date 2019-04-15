@@ -68,8 +68,8 @@ class Header extends Component{
         let navBar=(
                             <nav className="navbar">
                                 <Link to="/" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Home</Link>
-                                <Link to="/about#advisory_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Advisory board</Link>
-                                <Link to="/about#editorial_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Editorial board</Link>
+                                <Link to="/about/advisory_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Advisory board</Link>
+                                <Link to="/about/editorial_board" className="item xs-col-12" onClick={this.linkClick.bind(this)}>Editorial board</Link>
                                 <Link to="/callforPaper" className="item highlight  xs-col-12" onClick={this.linkClick.bind(this)}>Call for papers</Link>    
                             </nav>
         )

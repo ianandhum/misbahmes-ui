@@ -2,7 +2,8 @@ import React,{Component} from 'react'
 import Row from 'react-bootstrap/lib/Row'
 import Col from 'react-bootstrap/lib/Col'
 import {AutoAffix} from 'react-overlays'
-import {Document ,Page} from 'react-pdf/dist/entry.webpack';
+import Document from 'react-pdf/dist/Document'
+import Page from 'react-pdf/dist/Page'
 import $ from 'jquery'
 import './viewer.css'
 import LoadError from "./LoadError"
@@ -39,6 +40,7 @@ class HeadBox extends Component{
         this.setState({status:false})
         if(typeof this.props.onError==="function"){
           this.props.onError()
+          this.props.onContentLoad(false);
         }
     }
     onJsonFetch(json){
@@ -49,6 +51,7 @@ class HeadBox extends Component{
         }
         let state=json.data
         state.status=true
+        this.props.onContentLoad(true);
         this.setState(state)
     } 
     getDate(str){
@@ -221,6 +224,7 @@ class PdfContent extends React.Component {
       file:(this.props.file),
       className:(this.props.className),
       error:(<LoadingBox info='EDOC'/>),
+      loading:(<LoadingBox info='LOAD'/>),
       noData:<LoadingBox info='NODOC'/>
     }
     const propsPage={
@@ -229,8 +233,8 @@ class PdfContent extends React.Component {
       scale:this.props.scale,
       pageNumber:this.props.pageNumber,
       className:"cont_page_pdf",
-      error:(<LoadingBox info='EPAGE'/>),
-      loading:(<LoadingBox info='LOAD'/>),
+      error:("Error Loading Page"),
+      loading:("Loading Page..."),
       noData:<LoadingBox info='EPAGE'/>,
       key:"page_id_"+this.props.loaded
     }
@@ -251,12 +255,12 @@ class LoadingBox extends Component{
       'EPAGE':"ERROR LOADING PAGE",
       'NOPAGE':"PAGE NOT FOUND",
       'NODOC':"DOCUMENT NOT FOUND",
-      'LOAD':"LOADING PAGE...",
+      'LOAD':(<div class="loader-img dark"></div>),
       'LOADDOC':"LOADING DOCUMENT...",
       
     }
     return (
-      <div className="fill_box">{ error[this.props.info]}</div>
+      <div className="fill_box" style={{minHeight:"200px"}}>{ error[this.props.info]}</div>
     )
   }
 }
@@ -265,7 +269,8 @@ class Viewer extends Component{
     constructor(props){
       super(props)
       this.state={
-        loadError:false
+        loadError:false,
+        loading:true
       }
     }  
     onLoadError(){
@@ -273,27 +278,42 @@ class Viewer extends Component{
       prevState.loadError=true
       this.setState(prevState)
     }
+    showUI(status){
+      this.setState({
+        loadError:!status,
+        loading:false
+      })
+      console.log("hell")
+    }
     render(){
         return(
           <React.Fragment>
-              { this.state.loadError|| 
 
+              {
+                
+               this.state.loadError|| 
+                  <ContainerFluid className="v_viewer">
+                      <HeadBox onContentLoad  = {this.showUI.bind(this)} id={this.props.match.params.postId} onError={this.onLoadError.bind(this)}/>
+                      {
+                      this.state.loading ?
+                        <div style={{minHeight:"400px"}}>
+                        </div>
+                      :
+                      <DocViewer postId={this.props.match.params.postId}  onError={this.onLoadError.bind(this)}/>
+                      }
+                      <Col xs={12} md={12} className="foot_crumb" key="foot_crumb" style={{backgroundColor:'transparent',color:"#333"}}>
+                        <div className="txt">Copyright  <b> &copy; 2018 MES College Nedumkandam </b>
+                                  <span className="foot_link"><a  style={{color:"#000",fontWeight:"bold"}} href="http://mesnedumkandam.in/show_page.php?m_id=802">mesnedumkandam.in</a></span>
+                        </div>
+                      </Col>
+                  </ContainerFluid>
               
-                <ContainerFluid className="v_viewer">
-                    <HeadBox id={this.props.match.params.postId} onError={this.onLoadError.bind(this)}/>
-                    <DocViewer postId={this.props.match.params.postId}  onError={this.onLoadError.bind(this)}/>
-                    <Col xs={12} md={12} className="foot_crumb" key="foot_crumb" style={{backgroundColor:'transparent',color:"#333"}}>
-                      <div className="txt">Copyright  <b> &copy; 2018 MES College Nedumkandam </b>
-                                <span className="foot_link"><a  style={{color:"#000",fontWeight:"bold"}} href="http://mesnedumkandam.in/show_page.php?m_id=802">mesnedumkandam.in</a></span>
-
-                      </div>
-                    </Col>
-                </ContainerFluid>
               }
               {
                 this.state.loadError &&
                 <LoadError msg="external source not loaded"/>
               }
+
             </React.Fragment>
             );
     }
