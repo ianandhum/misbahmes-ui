@@ -1,4 +1,11 @@
-*.log
-build/*
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
 node_modules/*
+build/*
+.directory
+*.log
+*.log
 *.kate-swp
+yarn.lock
+package-lock.json

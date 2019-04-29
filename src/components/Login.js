@@ -1,27 +1,21 @@
 import React from "react"
-import $ from 'jquery'
 import "./login.css"
 import Col from "react-bootstrap/lib/Col"
+import Link from "react-router-dom/Link";
 class Login extends React.Component{
-    componentDidMount(){
-        $("#preload").children().fadeOut("slow",function(){
-            $("#preload").fadeOut("slow")
-            $('body').css({"overflow-y":"scroll"})
-        })
-    }
     render(){
-        $('body').attr("class","").addClass('login')
         return (
-            
-            <div className="login_page">
-                <Col xs={12} md={12} style={{textAlign:"center",marginBottom:"30px",color:"#333"}}>
-                                <a href="/" className="brand_link">
-                                <h2 className="brand"><span >MISBAH</span>
-                                <span className="tag_line">niche of knowledge</span>
-                                </h2>
-                                </a>
-                </Col>
-                <InputController />
+            <div className="login_page--main">
+                <div className="login_page">
+                    <Col xs={12} md={12} style={{textAlign:"center",marginBottom:"30px",color:"#333"}}>
+                                    <Link to="/" className="brand_link">
+                                    <h2 className="brand"><span >MISBAH</span>
+                                    <span className="tag_line">niche of knowledge</span>
+                                    </h2>
+                                    </Link>
+                    </Col>
+                    <InputController />
+                </div>
             </div>
         )   
     }

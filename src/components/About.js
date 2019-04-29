@@ -168,7 +168,8 @@ class About extends Component{
                     <h4 className="head_desc">We admire these great souls who put their hearts into it</h4>
                 </Row>
 
-                   
+                {
+                this.props.match.params.page === "editorial_board" ?
                 <Row style={{margin:0}} >
                     <Col  xs={12} md={12} className="col_main eb">
                         <h2 className="heading head_abt" id="editorial_board">
@@ -184,6 +185,7 @@ class About extends Component{
                         </Col> 
                     </Col>
                 </Row>
+                :
                 <Row style={{margin:0}}>
                     
                     <Col  xs={12} md={12} className="col_main ab">
@@ -199,6 +201,7 @@ class About extends Component{
                         </Col> 
                     </Col>
                 </Row>
+                }
                 <Col xs={12} md={12} className="foot_crumb" key="foot_crumb"  style={{backgroundColor:'transparent',color:"#333"}}>
                   <div className="txt">Copyright  <b> &copy; 2018 MES College Nedumkandam </b>
                             <span className="foot_link"><a  style={{color:"#000",fontWeight:"bold"}} href="http://mesnedumkandam.in/show_page.php?m_id=802">mesnedumkandam.in</a></span>

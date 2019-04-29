@@ -4,7 +4,6 @@
 body{
     background-color: #fff;
     overflow-x: hidden;
-    overflow: hidden;
     width:100%;
     color:#2e2e2e;
     font-family: sans-serif;
@@ -60,17 +59,3 @@ a:visited{
     font-size:1.2em;
     margin:10px 0;
 }
-
-
-/*
-    body page styles
-*/
-body.home{
-    background:#273238;
-    color:#fff;
-}
-body.login{
-    background:#010522;
-    color:rgb(240, 240, 240);
-}
-
