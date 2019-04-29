@@ -15,6 +15,8 @@ import CallForPaper from "./components/CallForPaper"
 import Login from "./components/Login"
 import NotFound from "./components/NotFound"
 
+import registerSW from './registerServiceWorker'
+
 class App extends React.Component{
    render(){
        return(
@@ -31,4 +33,7 @@ class App extends React.Component{
         )
    }     
 }
+
+registerSW();
+
 ReactDOM.render(<App/>,document.getElementById('root'));
